@@ -1,3 +1,6 @@
+#references:
+    #video: https://www.youtube.com/watch?v=L90WS-ptnvI
+
 #install
 import RPi.GPIO as GPIO
 import time
@@ -12,6 +15,9 @@ print("Distance Measurement In Progress")
 
 GPIO.setup(TRIG, GPIO.OUT)
 GPIO.setup(ECHO, GPIO.IN)
+
+
+
 
 try:
     while True:

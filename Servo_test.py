@@ -2,8 +2,26 @@
 from gpiozero import Servo
 from time import sleep
 
-servo = Servo(25)
+GPIO.setmode(GPIO.BCM)
+print("Starting Servo")
 
+
+servo = 25#Servo(25)
+GPIO.setup(servo, GPIO.OUT)
+
+#real code?
+pwm = GPIO.PWM(servo, 1000)#1000 is the pin freqiuency
+
+try:
+    pwm.start(50)
+    sleep(1.0)
+    pwm.stop()
+    sleep(1.0)
+
+except KeyboardInterrupt:
+	print("Program stopped")
+
+"""
 try:
     while True:
         servo.min()
@@ -16,6 +34,7 @@ except KeyboardInterrupt:
 	print("Program stopped")
 	
 #item 2
+"""
 """
 from gpiozero import Servo
 from time import sleep
