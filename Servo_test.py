@@ -1,6 +1,7 @@
 #item 1 
 from gpiozero import Servo
 from time import sleep
+import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
 print("Starting Servo")
