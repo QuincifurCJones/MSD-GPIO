@@ -14,10 +14,11 @@ GPIO.setup(servo, GPIO.OUT)
 pwm = GPIO.PWM(servo, 1000)#1000 is the pin freqiuency
 
 try:
-    pwm.start(50)
-    sleep(1.0)
-    pwm.stop()
-    sleep(1.0)
+    while True:
+        pwm.start(50)
+        sleep(1.0)
+        pwm.stop()
+        sleep(1.0)
 
 except KeyboardInterrupt:
 	print("Program stopped")
